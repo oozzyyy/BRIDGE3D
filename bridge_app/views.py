@@ -14,6 +14,3 @@ def page1(request):
 
 def page2(request):
     return render(request, "bridge_app/page2.html")
-
-def page3(request):
-    return render(request, "bridge_app/page3.html")
