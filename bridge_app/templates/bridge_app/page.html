@@ -11,9 +11,9 @@
   <div class="bridge-design">
     <nav class="header-nav">
       <div class="nav-links">
+        <a href="page2" class="nav-button" aria-label="Теория">ТЕОРИЯ</a>
         <a href="page2" class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</a>
-        <a href="page"class="nav-button" aria-label="Теория">ТЕОРИЯ</a>
-        <a href="page "class="nav-button" aria-label="Примеры">ПРИМЕРЫ</a>
+        <a href="page" class="nav-button" aria-label="Примеры">ПРИМЕРЫ</a>
         <a href="page1" class="nav-button" aria-label="Контакты">КОНТАКТЫ</a>
       </div>
       <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7082f07c2650e46b4b21187ee54647b4fb78bf876d61538596dbe1af6192978f?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="menu-icon" alt="" />
@@ -46,13 +46,10 @@
       <button class="bridge-button">ВИСЯЧИЕ МОСТЫ</button>
     </div>
   
-    <div class="button-container">
-      <button class="start-design-button" aria-label="Начать проектировать">
-          <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
-      </button>
+    <button href="bridge_designer" class="cta-button" aria-label="Начать проектировать">
+      <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
+    </button>
   </div>
-
-  
 
   <style>
     .bridge-design {
@@ -73,7 +70,39 @@
       font: 400 16px/44px Roboto, sans-serif;
     }
     
-    .nav-links {
+    .cta-button {
+      align-self: end;
+      border-radius: 391px;
+      background: var(--Accent, #2f62f6);
+      margin-top: 366px;
+      min-height: 78px;
+      color: var(--White, #fff);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: var(--Headline-Small-Tracking, 0px);
+      padding: 21px 45px;
+      font: 400 24px/36px Roboto, sans-serif;
+      cursor: pointer;
+      border: none;
+    }
+
+    .cta-button {
+      margin-left: auto; /* Сдвигает кнопку вправо */
+      margin-right: 100;   /* Убирает отступ справа */
+      display: block;    /* Устанавливает блочное отображение */
+    }
+
+    .cta-button a {
+    text-decoration: none;
+    }
+
+    .cta-button a:active,
+    .cta-button a:focus {
+      color: inherit;
+      outline: none; 
+    }
+    
+    .nav-button {
       background: none;
       border: none;
       color: inherit;
@@ -86,9 +115,15 @@
 
     }
     
-    .nav-links:hover {
+    .nav-button:hover {
       background-color: rgba(47, 98, 246, 0.1);
       text-decoration: underline;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px 67px;
+      flex-wrap: wrap;
     }
     
     .menu-icon {
@@ -109,6 +144,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
+      
     }
     
     .image-column {
@@ -137,8 +173,7 @@
       flex-direction: column;
       line-height: normal;
       width: 45%;
-      padding: 30px;
-
+      margin-left: 30px;
     }
     
     .description {
@@ -207,12 +242,6 @@
       border: none;
       cursor: pointer;
     }
-
-    .start-design-button {
-      margin-left: auto; /* Сдвигает кнопку вправо */
-      margin-right: 100;   /* Убирает отступ справа */
-      display: block;    /* Устанавливает блочное отображение */
-  }
     
     @media (max-width: 991px) {
       .bridge-design {
@@ -274,7 +303,8 @@
         margin-top: 40px;
         padding: 0 20px;
       }
-    }
+
+      
     </style>
 </body>
 </html>
