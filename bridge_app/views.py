@@ -8,3 +8,12 @@ def index(request):
 
 def page(request):
     return render(request, "bridge_app/page.html")
+
+def page1(request):
+    return render(request, "bridge_app/page1.html")
+
+def page2(request):
+    return render(request, "bridge_app/page2.html")
+
+def page3(request):
+    return render(request, "bridge_app/page3.html")
