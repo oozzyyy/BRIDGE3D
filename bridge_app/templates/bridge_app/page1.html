@@ -12,7 +12,7 @@
   <div class="contact-section">
     <nav class="nav-container">
       <div class="nav-links">
-        <div tabindex="0" role="button">О ПРОЕКТЕ</div>
+        <a href="page2">О ПРОЕКТЕ</a>
         <div tabindex="0" role="button">ТЕОРИЯ</div>
         <div tabindex="0" role="button">ПРИМЕРЫ</div>
         <div tabindex="0" role="button">КОНТАКТЫ</div>
@@ -20,7 +20,7 @@
       <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7082f07c2650e46b4b21187ee54647b4fb78bf876d61538596dbe1af6192978f?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="logo" alt="Company Logo" />
     </nav>
   
-    <div class="image-container" style="position: relative; width: 300px; height: 200px;">
+    <div class="image-container" style="position: relative; width: 300px; height: 200px; margin-top: 30px;">
         <img 
           class="background-image" 
           loading="lazy" 
@@ -85,7 +85,9 @@
       </div>
     </div>
   
-    <button class="cta-button">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
+    <button href="bridge_designer" class="cta-button" aria-label="Начать проектировать">
+        <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
+    </button>
   </div>
 
   <style>
@@ -156,11 +158,11 @@
         font: 14px/1.4 Roboto, sans-serif; 
     }
     .member-card h3 {
-        margin-bottom: 10px; /* Отступ под заголовком */
-        font-size: 18px; /* Размер шрифта заголовка */
+        margin-bottom: 10px; 
+        font-size: 18px;
       }
       .member-card p {
-        margin: 5px 0; /* Отступы между строками */
+        margin: 5px 0; 
         font-size: 14px;
       }
     .member-name {
