@@ -4,7 +4,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', views.bridge_designer, name='bridge_designer'),
+    path('bridge_designer', views.bridge_designer, name='bridge_designer'),
+    path('', views.index),
+    path('page', views.page),
 ]
 
 if settings.DEBUG:

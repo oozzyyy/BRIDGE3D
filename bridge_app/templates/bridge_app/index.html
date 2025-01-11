@@ -1,0 +1,199 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>Мост Проект</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <div class="main-container">
+        <nav class="header-nav" role="navigation" aria-label="Main navigation">
+          <div class="nav-links">
+            <button class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</button>
+            <button class="nav-button" aria-label="Теория">ТЕОРИЯ</button>
+            <button class="nav-button" aria-label="Примеры">ПРИМЕРЫ</button>
+            <button class="nav-button" aria-label="Контакты">КОНТАКТЫ</button>
+          </div>
+          <button href="page" class="search-button" aria-label="Search">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/367bf299f54175b6b2c124d3b298a66eeca6205bca5fef15aa26b2d7b065baaf?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="logo" alt="Search" />
+          </button>
+        </nav>
+        
+        <div class="logo-section" role="region" aria-label="Project branding">
+          <h2 class="logo-text"></h2>
+          <h2 class="logo-text-secondary">МОСТ ПРОЕКТ</h2>
+        </div>
+        
+        <h1 class="hero-title">
+          Онлайн-конструктор мостов, мостовых<br />
+          переходов и эстакад различного типа<br />
+          и назначения
+        </h1>
+        
+        <button href="bridge_designer" class="cta-button" aria-label="Начать проектировать">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
+      </div>
+      
+      <style>
+      .main-container {
+            background-image: url('/static/img/Titul_back.svg');
+            background-size: cover; /* или contain, если важно сохранить пропорции */
+            background-repeat: no-repeat;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 15px 60px 91px;
+        }
+      
+      .header-nav {
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        color: rgba(52, 51, 51, 1);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font: 400 16px/44px Roboto, sans-serif;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 40px 67px;
+        flex-wrap: wrap;
+      }
+      
+      .nav-button {
+        background: none;
+        border: none;
+        color: inherit;
+        font: inherit;
+        cursor: pointer;
+        padding: 8px 16px;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 4px;
+      }
+      
+      .nav-button:hover {
+        background-color: rgba(47, 98, 246, 0.1);
+      }
+      
+      .nav-button:focus {
+        outline: 2px solid #2f62f6;
+        outline-offset: 2px;
+      }
+      
+      .search-button {
+        background: none;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .search-button:focus {
+        outline: 2px solid #2f62f6;
+        outline-offset: 2px;
+      }
+      
+      .logo {
+        aspect-ratio: 1;
+        object-fit: contain;
+        object-position: center;
+        width: 32px;
+      }
+      
+      .logo-section {
+        margin-top: 84px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      
+      .logo-text {
+        color: #000000;
+        font-family: 'Roboto', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+      }
+      
+      .logo-text-secondary {
+        color: #000000;
+        font-family: 'Roboto', sans-serif;
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+      }
+      
+      .hero-title {
+        color: rgb(0, 0, 0);
+        align-self: start;
+        margin-top: 26px;
+        font: 400 24px/28px Roboto, sans-serif;
+      }
+      
+      .cta-button {
+          align-self: end;
+          border-radius: 391px;
+          background: var(--Accent, #2f62f6);
+          margin-top: 366px;
+          min-height: 78px;
+          color: var(--White, #fff);
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: var(--Headline-Small-Tracking, 0px);
+          padding: 21px 45px;
+          font: 400 24px/36px Roboto, sans-serif;
+          cursor: pointer;
+        }
+      
+      .cta-button:hover {
+        background-color: #1f52e6;
+      }
+      
+      .cta-button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+      }
+      
+      @media (max-width: 991px) {
+        .main-container {
+          padding: 0 20px;
+        }
+        
+        .header-nav {
+          max-width: 100%;
+          margin-right: 5px;
+        }
+        
+        .nav-links {
+          max-width: 100%;
+        }
+        
+        .logo-section {
+          margin: 40px 0 0 5px;
+        }
+        
+        .hero-title {
+          max-width: 100%;
+        }
+        
+        .cta-button {
+          margin-top: 40px;
+          padding: 21px 30px;
+          width: 100%;
+        }
+      }
+      
+      @media (prefers-reduced-motion: reduce) {
+        .nav-button,
+        .cta-button {
+          transition: none;
+        }
+      }
+      </style>
+</head>
+<body>
+</body>
+</html>
