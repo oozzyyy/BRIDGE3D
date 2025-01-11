@@ -7,13 +7,12 @@
     <title>Мост Проект</title>
 </head>
 <body>
-    <div class="project-overview">
+    <div class="contact-section">
         <div class="nav-container">
-          <div class="nav-links">
-            <div>О ПРОЕКТЕ</div>
-            <div>ТЕОРИЯ</div>
-            <div>ПРИМЕРЫ</div>
-            <div>КОНТАКТЫ</div>
+        <a href="page2" class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</a>
+        <a href="page"class="nav-button" aria-label="Теория">ТЕОРИЯ</a>
+        <a href="page "class="nav-button" aria-label="Примеры">ПРИМЕРЫ</a>
+        <a href="page1" class="nav-button" aria-label="Контакты">КОНТАКТЫ</a>
           </div>
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/367bf299f54175b6b2c124d3b298a66eeca6205bca5fef15aa26b2d7b065baaf?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="logo" alt="Company Logo" />
         </div>
@@ -67,8 +66,11 @@
                   </div>
                 </div>
                 
-                <button class="cta-button" tabindex="0">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
-              </div>
+                <div class="button-container">
+                    <button class="cta-button" aria-label="Начать проектировать">
+                        <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
+                    </button>
+                </div>
             </div>
           </div>
         </div>
@@ -234,19 +236,35 @@
         }
         
         .cta-button {
-          align-self: end;
-          border-radius: 391px;
-          background: var(--Accent, #2f62f6);
-          margin-top: 90px;
-          min-height: 78px;
-          color: var(--White, #fff);
-          text-align: center;
-          text-transform: uppercase;
-          letter-spacing: var(--Headline-Small-Tracking, 0px);
-          padding: 21px 45px;
-          font: 24px/36px Roboto, sans-serif;
-          cursor: pointer;
-        }
+            align-self: end;
+            border-radius: 391px;
+            background: var(--Accent, #2f62f6);
+            margin-top: 225px;
+            color: var(--White, #fff);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: var(--Headline-Small-Tracking, 0px);
+            padding: 21px 45px;
+            font: 400 24px/36px Roboto, sans-serif;
+            cursor: pointer;
+            
+          }
+      
+          .cta-button {
+              margin-left: auto; /* Сдвигает кнопку вправо */
+              margin-right: 100;   /* Убирает отступ справа */
+              display: block;    /* Устанавливает блочное отображение */
+          }
+      
+          .cta-button a {
+            text-decoration: none;
+          }
+      
+          .cta-button a:active,
+          .cta-button a:focus {
+            color: inherit;
+            outline: none; 
+            }
         
         .heading-bold {
           font-weight: 700;

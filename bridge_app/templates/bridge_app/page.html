@@ -11,10 +11,10 @@
   <div class="bridge-design">
     <nav class="header-nav">
       <div class="nav-links">
-        <div tabindex="0" role="button">О ПРОЕКТЕ</div>
-        <div tabindex="0" role="button">ТЕОРИЯ</div>
-        <div tabindex="0" role="button">ПРИМЕРЫ</div>
-        <div tabindex="0" role="button">КОНТАКТЫ</div>
+        <a href="page2" class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</a>
+        <a href="page"class="nav-button" aria-label="Теория">ТЕОРИЯ</a>
+        <a href="page "class="nav-button" aria-label="Примеры">ПРИМЕРЫ</a>
+        <a href="page1" class="nav-button" aria-label="Контакты">КОНТАКТЫ</a>
       </div>
       <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7082f07c2650e46b4b21187ee54647b4fb78bf876d61538596dbe1af6192978f?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="menu-icon" alt="" />
     </nav>
@@ -46,8 +46,13 @@
       <button class="bridge-button">ВИСЯЧИЕ МОСТЫ</button>
     </div>
   
-    <button class="start-design-button">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
+    <div class="button-container">
+      <button class="start-design-button" aria-label="Начать проектировать">
+          <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
+      </button>
   </div>
+
+  
 
   <style>
     .bridge-design {
@@ -190,6 +195,12 @@
       border: none;
       cursor: pointer;
     }
+
+    .start-design-button {
+      margin-left: auto; /* Сдвигает кнопку вправо */
+      margin-right: 100;   /* Убирает отступ справа */
+      display: block;    /* Устанавливает блочное отображение */
+  }
     
     @media (max-width: 991px) {
       .bridge-design {
