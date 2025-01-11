@@ -30,7 +30,9 @@
           и назначения
         </h1>
         
-        <button href="bridge_designer" class="cta-button" aria-label="Начать проектировать">НАЧАТЬ ПРОЕКТИРОВАТЬ</button>
+        <button href="bridge_designer" class="cta-button" aria-label="Начать проектировать">
+          <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
+        </button>
       </div>
       
       <style>
@@ -155,6 +157,21 @@
       .cta-button:focus {
         outline: 2px solid #fff;
         outline-offset: 2px;
+      }
+      .cta-button a {
+    text-decoration: none; /* Убирает подчеркивание */
+    color: inherit; /* Использует цвет родительского элемента */
+      }
+
+      .cta-button a:active,
+      .cta-button a:focus {
+    color: inherit; /* Убирает изменение цвета при нажатии */
+    outline: none; /* Убирает контур фокуса */
+      }
+
+      .cta-button a:hover {
+    text-decoration: none; /* Подчеркивание не появляется при наведении */
+    color: inherit; /* Не изменяет цвет при наведении */
       }
       
       @media (max-width: 991px) {
