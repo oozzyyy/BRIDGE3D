@@ -84,22 +84,25 @@
     .main-content {
       align-self: center;
       width: 100%;
-      max-width: 1029px;
-      margin: 64px 0 0 17px;
+      margin: 64px 0 0 0;
     }
     
     .content-wrapper {
       gap: 20px;
       display: flex;
       justify-content: space-between;
+      width: 100%;
     }
     
     .image-column {
       background-image: url('/static/bridge_app/img/oproekte2.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
       flex-direction: column;
       line-height: normal;
       width: 45%;
+      padding: 30px;
     }
     
     .bridge-image {
@@ -111,11 +114,14 @@
     
     .text-column {
       background-image: url('/static/bridge_app/img/oproekte1.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
       display: flex;
       flex-direction: column;
       line-height: normal;
-      width: 55%;
-      margin-left: 20px;
+      width: 45%;
+      padding: 30px;
+
     }
     
     .description {
