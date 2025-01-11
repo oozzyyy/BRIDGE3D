@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, intial-scale=1.0">
     <title>Мост Проект</title>
+    <link rel="stylesheet" href="{% static 'bridge_app/css/style.css' %}">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
+</head>
+<body>
     <div class="main-container">
         <nav class="header-nav" role="navigation" aria-label="Main navigation">
           <div class="nav-links">
@@ -18,33 +21,39 @@
             <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/367bf299f54175b6b2c124d3b298a66eeca6205bca5fef15aa26b2d7b065baaf?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="logo" alt="Search" />
           </button>
         </nav>
-        
-        <div class="logo-section" role="region" aria-label="Project branding">
-          <h2 class="logo-text"></h2>
-          <h2 class="logo-text-secondary">МОСТ ПРОЕКТ</h2>
+        <div class="hero-container">
+          <div class="logo-section" role="region" aria-label="Project branding">
+            <h2 class="logo-text"><svg width="104" height="53" viewBox="0 0 104 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M28.8127 33.66V19.1681C25.4377 17.6203 22.2971 15.7444 19.4377 13.54V33.66H28.8127ZM19.4377 52.4204H10.0626V43.0402H0.687481V33.66H10.0626V0.830185H19.4377V7.53688C27.8753 14.9001 39.4535 19.5902 52.2505 19.5902C65.0478 19.5902 76.6256 14.9001 85.0634 7.53688V0.830185H94.4381V33.66H103.813V43.0402H94.4381V52.4204H85.0634V43.0402H19.4377V52.4204ZM75.6882 19.1681V33.66H85.0634V13.54C82.2036 15.7444 79.0635 17.6203 75.6882 19.1681ZM71.0008 33.66V21.091C68.0006 22.1697 64.8599 22.967 61.6256 23.5298V33.66H71.0008ZM56.9383 33.66V24.0926L52.2505 24.2802L47.563 24.0926V33.66H56.9383ZM42.8754 33.66V23.5298C39.641 22.967 36.5003 22.1697 33.5003 21.091V33.66H42.8754Z" fill="white"/>
+              </svg>
+              </h2>
+            <h2 class="logo-text-secondary">МОСТ ПРОЕКТ</h2>
+          </div>
+          
+          <h1 class="hero-title">
+            Онлайн-конструктор мостов, мостовых<br />
+            переходов и эстакад различного типа<br />
+            и назначения
+          </h1>
+          
+          <button href="bridge_designer" class="cta-button" aria-label="Начать проектировать">
+            <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
+          </button>
         </div>
-        
-        <h1 class="hero-title">
-          Онлайн-конструктор мостов, мостовых<br />
-          переходов и эстакад различного типа<br />
-          и назначения
-        </h1>
-        
-        <button href="bridge_designer" class="cta-button" aria-label="Начать проектировать">
-          <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
-        </button>
       </div>
       
       <style>
-      .main-container {
-            background-image: url('/static/img/Titul_back.svg');
-            background-size: cover; /* или contain, если важно сохранить пропорции */
-            background-repeat: no-repeat;
-            background-position: center;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            padding: 15px 60px 91px;
+        .hero-container{
+          background-image: url('/static/bridge_app/img/Titul_back.svg');
+          background-size: cover; /* или contain, если важно сохранить пропорции */
+          background-repeat: no-repeat;
+          background-position: center;
+          padding: 0 60px;
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+          height: 100vh;
+          
         }
       
       .header-nav {
@@ -52,6 +61,7 @@
         width: 100%;
         gap: 20px;
         color: rgba(52, 51, 51, 1);
+        padding: 0 60px;
         flex-wrap: wrap;
         justify-content: space-between;
         font: 400 16px/44px Roboto, sans-serif;
@@ -76,12 +86,9 @@
       
       .nav-button:hover {
         background-color: rgba(47, 98, 246, 0.1);
+        text-decoration: underline;
       }
       
-      .nav-button:focus {
-        outline: 2px solid #2f62f6;
-        outline-offset: 2px;
-      }
       
       .search-button {
         background: none;
@@ -113,7 +120,7 @@
       }
       
       .logo-text {
-        color: #000000;
+        color: #fff;
         font-family: 'Roboto', sans-serif;
         font-size: 32px;
         font-weight: 700;
@@ -121,7 +128,7 @@
       }
       
       .logo-text-secondary {
-        color: #000000;
+        color: #fff;
         font-family: 'Roboto', sans-serif;
         font-size: 32px;
         font-weight: 700;
@@ -129,7 +136,7 @@
       }
       
       .hero-title {
-        color: rgb(0, 0, 0);
+        color: #fff;
         align-self: start;
         margin-top: 26px;
         font: 400 24px/28px Roboto, sans-serif;
@@ -148,6 +155,7 @@
           padding: 21px 45px;
           font: 400 24px/36px Roboto, sans-serif;
           cursor: pointer;
+          border: none;
         }
       
       .cta-button:hover {
@@ -210,7 +218,6 @@
         }
       }
       </style>
-</head>
-<body>
+
 </body>
 </html>
