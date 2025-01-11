@@ -12,10 +12,10 @@
   <div class="contact-section">
     <nav class="nav-container">
       <div class="nav-links">
-        <a href="page2">О ПРОЕКТЕ</a>
-        <div tabindex="0" role="button">ТЕОРИЯ</div>
-        <div tabindex="0" role="button">ПРИМЕРЫ</div>
-        <div tabindex="0" role="button">КОНТАКТЫ</div>
+        <button href="page2" class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</button>
+        <button class="nav-button" aria-label="Теория">ТЕОРИЯ</button>
+        <button class="nav-button" aria-label="Примеры">ПРИМЕРЫ</button>
+        <button class="nav-button" aria-label="Контакты">КОНТАКТЫ</button>
       </div>
       <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7082f07c2650e46b4b21187ee54647b4fb78bf876d61538596dbe1af6192978f?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="logo" alt="Company Logo" />
     </nav>
@@ -113,6 +113,23 @@
       gap: 40px 67px;
       flex-wrap: wrap;
     }
+
+    .nav-button {
+      background: none;
+      border: none;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      padding: 8px 16px;
+      transition: background-color 0.3s, color 0.3s;
+      border-radius: 4px;
+    }
+    
+    .nav-button:hover {
+      background-color: rgba(47, 98, 246, 0.1);
+      text-decoration: underline;
+    }
+
     .logo {
       aspect-ratio: 1;
       object-fit: contain;
@@ -195,7 +212,18 @@
       padding: 21px 45px;
       font: 400 24px/36px Roboto, sans-serif;
       cursor: pointer;
+      
     }
+    .cta-button a {
+      text-decoration: none;
+    }
+
+    .cta-button a:active,
+    .cta-button a:focus {
+      color: inherit;
+      outline: none; 
+      }
+
     @media (max-width: 991px) {
       .contact-section {
         padding: 0 20px;
