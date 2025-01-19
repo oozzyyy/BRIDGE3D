@@ -1,0 +1,233 @@
+body, p {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+*{
+  box-sizing: border-box;
+}
+.header-nav {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  color: rgba(52, 51, 51, 1);
+  padding: 0 60px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font: 400 16px/44px Roboto, sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px 67px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: text-decoration 0.2s;
+  border-radius: 4px;
+  text-decoration: none;
+
+}
+
+.nav-button:hover {
+  background-color: rgba(47, 98, 246, 0.1);
+  text-decoration: underline;
+}
+
+
+.search-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:focus {
+  outline: 2px solid #2f62f6;
+  outline-offset: 2px;
+}
+
+.contact-section {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 15px 60px 59px;
+}
+.nav-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  color: #343333;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font: 400 16px/44px Roboto, sans-serif;
+}
+.nav-links {
+  display: flex;
+  gap: 40px 67px;
+  flex-wrap: wrap;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 4px;
+}
+
+.nav-button:hover {
+  background-color: rgba(47, 98, 246, 0.1);
+  text-decoration: underline;
+}
+
+.logo {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 32px;
+  align-self: start;
+}
+.hero-image {
+  aspect-ratio: 3.47;
+  object-fit: contain;
+  object-position: center;
+  width: 385px;
+  max-width: 100%;
+  margin: 64px 0 0 82px;
+}
+.team-title {
+  color: #343333;
+  align-self: start;
+  margin-top: 45px;
+  font: 400 24px/44px Roboto, sans-serif;
+}
+.team-container {
+  margin-top: 14px;
+}
+.team-grid {
+  gap: 20px;
+  display: flex;
+}
+.team-member {
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  width: 33%;
+}
+.member-card {
+  background-color: #f0f0f0; 
+  height: 200px;
+  padding: 20px; 
+  text-align: left; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  font: 16px/1.4 Roboto, sans-serif; 
+}
+.member-card h3 {
+    margin-bottom: 10px; 
+    font-size: 18px;
+  }
+  .member-card p {
+    margin: 5px 0; 
+    font-size: 14px;
+  }
+.member-name {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 2.2;
+}
+.contact-info {
+  align-self: stretch;
+  display: flex;
+  margin-top: 35px;
+  gap: 17px;
+}
+.contact-label {
+  font-weight: 400;
+}
+.contact-value {
+  font-weight: 700;
+  flex-grow: 1;
+}
+.cta-button {
+  margin-top: auto;
+  align-self: end;
+  border-radius: 50px;
+  background: var(--Accent, #2f62f6);
+  min-height: 78px;
+  color: var(--White, #fff);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: var(--Headline-Small-Tracking, 0px);
+  padding: 21px 45px;
+  font: 400 24px/36px Roboto, sans-serif;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.cta-button:active,
+.cta-button:focus, .cta-button:visited {
+  color: #fff;
+  outline: none; 
+}
+.button-container{
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+@media (max-width: 991px) {
+  .contact-section {
+    padding: 0 20px;
+  }
+  .nav-container {
+    max-width: 100%;
+    margin-right: 5px;
+  }
+  .nav-links {
+    max-width: 100%;
+  }
+  .hero-image {
+    margin: 40px 0 0 10px;
+  }
+  .team-title {
+    margin-top: 40px;
+  }
+  .team-container {
+    max-width: 100%;
+    margin-right: 5px;
+  }
+  .team-grid {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+  .team-member {
+    width: 100%;
+  }
+  .member-card {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+  .cta-button {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+}
