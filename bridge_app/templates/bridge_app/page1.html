@@ -1,5 +1,8 @@
 {% extends "bridge_app/layout.html" %}
 {% load static %}
+{% block title %}
+  Контакты
+{% endblock %}
 {% block css %}
   <link rel="stylesheet" href="{% static 'bridge_app/css/page1.css' %}">
 {% endblock %}
@@ -16,13 +19,15 @@
           style="position: absolute; top: 0; left: 0; width: 558px; height: 190px; z-index: 1;" 
           alt="Фон"
         >
-        <img 
-          class="overlay-image" 
-          loading="lazy" 
-          src="/static/bridge_app/img/logo_page1.svg" 
-          style="position: absolute; top: 35px; left: 80px; width: 385px; height 111.3px: auto; z-index: 2;" 
-          alt="Лого"
-        >
+        <a href="page2" class="bridge-image">
+          <img 
+            class="overlay-image" 
+            loading="lazy" 
+            src="/static/bridge_app/img/logo_page1.svg" 
+            style="position: absolute; top: 35px; left: 80px; width: 385px; height 111.3px: auto; z-index: 2;" 
+            alt="Лого"
+          >
+        </a>
       </div>
     
     <h2 class="team-title">Команда проекта:</h2>
