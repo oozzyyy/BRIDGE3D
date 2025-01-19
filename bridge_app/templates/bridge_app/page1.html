@@ -1,33 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <title>Мост Проект</title>
-</head>
-
-
-<body>
+{% extends "bridge_app/layout.html" %}
+{% load static %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'bridge_app/css/page1.css' %}">
+{% endblock %}
+{% block content %}
   <div class="contact-section">
-    <nav class="nav-container">
-      <div class="nav-links">
-        <a href="page2" class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</a>
-        <a href="page"class="nav-button" aria-label="Теория">ТЕОРИЯ</a>
-        <a href="page "class="nav-button" aria-label="Примеры">ПРИМЕРЫ</a>
-        <a href="page1" class="nav-button" aria-label="Контакты">КОНТАКТЫ</a>
-      </div>
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7082f07c2650e46b4b21187ee54647b4fb78bf876d61538596dbe1af6192978f?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="logo" alt="Company Logo" />
-    </nav>
-
     <div class="hero-container">
           <div class="logo-section" role="region" aria-label="Project branding">
-            <h2 class="logo-text">
-                <a href="page">
-                <svg width="104" height="53" viewBox="0 0 104 53" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M28.8127 33.66V19.1681C25.4377 17.6203 22.2971 15.7444 19.4377 13.54V33.66H28.8127ZM19.4377 52.4204H10.0626V43.0402H0.687481V33.66H10.0626V0.830185H19.4377V7.53688C27.8753 14.9001 39.4535 19.5902 52.2505 19.5902C65.0478 19.5902 76.6256 14.9001 85.0634 7.53688V0.830185H94.4381V33.66H103.813V43.0402H94.4381V52.4204H85.0634V43.0402H19.4377V52.4204ZM75.6882 19.1681V33.66H85.0634V13.54C82.2036 15.7444 79.0635 17.6203 75.6882 19.1681ZM71.0008 33.66V21.091C68.0006 22.1697 64.8599 22.967 61.6256 23.5298V33.66H71.0008ZM56.9383 33.66V24.0926L52.2505 24.2802L47.563 24.0926V33.66H56.9383ZM42.8754 33.66V23.5298C39.641 22.967 36.5003 22.1697 33.5003 21.091V33.66H42.8754Z" fill="white"/>
-              </svg>
-            </a>
   
     <div class="image-container" style="position: relative; width: 300px; height: 200px; margin-top: 30px;">
         <img 
@@ -95,191 +74,12 @@
     </div>
   
     <div class="button-container">
-        <button class="cta-button" aria-label="Начать проектировать">
-            <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
-        </button>
+      <a href="page" class="cta-button">
+        НАЧАТЬ ПРОЕКТИРОВАТЬ
+      </a>
     </div>
 
   <style>
-    .contact-section {
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      padding: 15px 60px 59px;
-    }
-    .nav-container {
-      display: flex;
-      width: 100%;
-      gap: 20px;
-      color: #343333;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      font: 400 16px/44px Roboto, sans-serif;
-    }
-    .nav-links {
-      display: flex;
-      gap: 40px 67px;
-      flex-wrap: wrap;
-    }
-
-    .nav-button {
-      background: none;
-      border: none;
-      color: inherit;
-      font: inherit;
-      cursor: pointer;
-      padding: 8px 16px;
-      transition: background-color 0.3s, color 0.3s;
-      border-radius: 4px;
-    }
     
-    .nav-button:hover {
-      background-color: rgba(47, 98, 246, 0.1);
-      text-decoration: underline;
-    }
-
-    .logo {
-      aspect-ratio: 1;
-      object-fit: contain;
-      object-position: center;
-      width: 32px;
-      align-self: start;
-    }
-    .hero-image {
-      aspect-ratio: 3.47;
-      object-fit: contain;
-      object-position: center;
-      width: 385px;
-      max-width: 100%;
-      margin: 64px 0 0 82px;
-    }
-    .team-title {
-      color: #343333;
-      align-self: start;
-      margin-top: 45px;
-      font: 400 24px/44px Roboto, sans-serif;
-    }
-    .team-container {
-      margin-top: 14px;
-    }
-    .team-grid {
-      gap: 20px;
-      display: flex;
-    }
-    .team-member {
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 33%;
-    }
-    .member-card {
-        background-color: #f0f0f0; 
-        width: 300px; 
-        height: 200px;
-        padding: 20px; 
-        text-align: left; 
-        border-radius: 10px; 
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-        font: 14px/1.4 Roboto, sans-serif; 
-    }
-    .member-card h3 {
-        margin-bottom: 10px; 
-        font-size: 18px;
-      }
-      .member-card p {
-        margin: 5px 0; 
-        font-size: 14px;
-      }
-    .member-name {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 2.2;
-    }
-    .contact-info {
-      align-self: stretch;
-      display: flex;
-      margin-top: 35px;
-      gap: 17px;
-    }
-    .contact-label {
-      font-weight: 400;
-    }
-    .contact-value {
-      font-weight: 700;
-      flex-grow: 1;
-    }
-    .cta-button {
-      align-self: end;
-      border-radius: 391px;
-      background: var(--Accent, #2f62f6);
-      margin-top: 225px;
-      color: var(--White, #fff);
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: var(--Headline-Small-Tracking, 0px);
-      padding: 21px 45px;
-      font: 400 24px/36px Roboto, sans-serif;
-      cursor: pointer;
-      
-    }
-
-    .cta-button {
-        margin-left: auto; /* Сдвигает кнопку вправо */
-        margin-right: 100;   /* Убирает отступ справа */
-        display: block;    /* Устанавливает блочное отображение */
-    }
-
-    .cta-button a {
-      text-decoration: none;
-    }
-
-    .cta-button a:active,
-    .cta-button a:focus {
-      color: inherit;
-      outline: none; 
-      }
-
-    @media (max-width: 991px) {
-      .contact-section {
-        padding: 0 20px;
-      }
-      .nav-container {
-        max-width: 100%;
-        margin-right: 5px;
-      }
-      .nav-links {
-        max-width: 100%;
-      }
-      .hero-image {
-        margin: 40px 0 0 10px;
-      }
-      .team-title {
-        margin-top: 40px;
-      }
-      .team-container {
-        max-width: 100%;
-        margin-right: 5px;
-      }
-      .team-grid {
-        gap: 20px;
-        display: flex;
-        justify-content: center;
-    }
-      .team-member {
-        width: 100%;
-      }
-      .member-card {
-        margin-top: 40px;
-        padding: 0 20px;
-      }
-      .cta-button {
-        margin-top: 40px;
-        padding: 0 20px;
-      }
-    }
   </style>
-
-</body>
-</html>
+{% endblock %}
