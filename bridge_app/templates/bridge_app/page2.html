@@ -1,354 +1,70 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <title>Мост Проект</title>
-</head>
-<body>
-    <div class="contact-section">
-        <div class="nav-container">
-        <a href="page2" class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</a>
-        <a href="page"class="nav-button" aria-label="Теория">ТЕОРИЯ</a>
-        <a href="page "class="nav-button" aria-label="Примеры">ПРИМЕРЫ</a>
-        <a href="page1" class="nav-button" aria-label="Контакты">КОНТАКТЫ</a>
-          </div>
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/367bf299f54175b6b2c124d3b298a66eeca6205bca5fef15aa26b2d7b065baaf?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="logo" alt="Company Logo" />
+{% extends "bridge_app/layout.html" %}
+{% load static %}
+{% block title %}
+  О проекте
+{% endblock %}
+{% block css %}
+  <link rel="stylesheet" href="{% static 'bridge_app/css/page2.css' %}">
+{% endblock %}
+{% block content %}
+  <div class="project-overview">
+    <main class="main-content">
+      <div class="content-wrapper">
+        <div class="image-column">
+          <a href="index" class="bridge-image">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02ebcdcb6386362723e417bdfc1c1a6e651d28fa8ffe9894e508591f6d4e4383?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="bridge-image" alt="Bridge design visualization" />
+          </a>
+        </div>
+        <div class="text-column">
+          <p class="description">
+            Расчет, анализ и виртуальные испытания проектируемых и существующих сооружений: от простых пешеходных переходов до уникальных конструкций.
+          </p>
+        </div>
+      </div>
+    </main>
+    <div class="main-content">
+      <div class="content-wrapper">
+        <div class="text-column main-description">
+          <p class="description">
+            Онлайн-сервис проектировщика мостов представляет собой современное программное обеспечение, предназначенное для оптимизации процесса проектирования мостовых конструкций. Использование данного инструмента позволяет инженерам значительно сократить временные затраты на разработку проектов, повысить точность расчетов и минимизировать риски возникновения ошибок.
+          </p>
         </div>
         
-        <div class="hero-section">
-          <div class="hero-content">
-            <div class="hero-image-col">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f90eed42659ff559566f63952af3f032bfc99b83c3f4601e542553dc2f45da1f?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="hero-image" alt="Bridge Design Visualization" />
-            </div>
-            <div class="hero-text-col">
-              <div class="hero-heading">
-                Расчет, анализ и виртуальные испытания проектируемых и существующих сооружений: от простых пешеходных переходов до уникальных конструкций.
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="main-content">
-          <div class="content-grid">
-            <div class="description-col">
-              <div class="main-description">
-                Онлайн-сервис проектировщика мостов представляет собой современное программное обеспечение, предназначенное для оптимизации процесса проектирования мостовых конструкций. Использование данного инструмента позволяет инженерам значительно сократить временные затраты на разработку проектов, повысить точность расчетов и минимизировать риски возникновения ошибок.
+        <div class="features-col">
+          <div class="features-wrapper">
+            <div class="feature-block">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4187a18f27ec3af0a81131068fa865ea89283fe8eb2396f8b4d437d3c542302?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="feature-icon" alt="Features Icon" />
+              <div class="feature-list">
+                <div class="heading-bold">Основные функции сервиса включают:</div>
+                <ul>
+                  <li class="list-item">Автоматизированное создание чертежей и схем;</li>
+                  <li class="list-item">Проведение комплексных инженерных расчетов с учетом всех нормативных требований;</li>
+                  <li class="list-item">Визуализация проекта в 3D формате для детального анализа конструкции;</li>
+                  <li class="list-item">Возможность интеграции с другими инженерными программами.</li>
+                </ul>
               </div>
             </div>
             
-            <div class="features-col">
-              <div class="features-wrapper">
-                <div class="feature-block">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/d4187a18f27ec3af0a81131068fa865ea89283fe8eb2396f8b4d437d3c542302?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="feature-icon" alt="Features Icon" />
-                  <div class="feature-list">
-                    <div class="heading-bold">Основные функции сервиса включают:</div>
-                    <ul>
-                      <li class="list-item">Автоматизированное создание чертежей и схем;</li>
-                      <li class="list-item">Проведение комплексных инженерных расчетов с учетом всех нормативных требований;</li>
-                      <li class="list-item">Визуализация проекта в 3D формате для детального анализа конструкции;</li>
-                      <li class="list-item">Возможность интеграции с другими инженерными программами.</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="benefits-block">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ea0c022eac43fdce9a1f8a8aacab8761ea0793a3be8da8050023e57f1a2eeb5f?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="benefits-icon" alt="Benefits Icon" />
-                  <div class="benefits-list">
-                    <div class="heading-bold">Преимущества использования онлайн-проектировщика мостов:</div>
-                    <ul>
-                      <li class="list-item">Доступность в любое время и с любого устройства;</li>
-                      <li class="list-item">Обеспечение высокой точности и надежности результатов;</li>
-                      <li class="list-item">Экономия ресурсов за счет автоматизации рутинных задач;</li>
-                      <li class="list-item">Постоянная поддержка и обновления программного обеспечения.</li>
-                    </ul>
-                  </div>
-                </div>
-                
-                <div class="button-container">
-                    <button class="cta-button" aria-label="Начать проектировать">
-                        <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
-                    </button>
-                </div>
+            <div class="feature-block">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ea0c022eac43fdce9a1f8a8aacab8761ea0793a3be8da8050023e57f1a2eeb5f?placeholderIfAbsent=true&apiKey=59f28eeff0d54a489ea23ebcb4424255" class="benefits-icon" alt="Benefits Icon" />
+              <div class="benefits-list">
+                <div class="heading-bold">Преимущества использования онлайн-проектировщика мостов:</div>
+                <ul>
+                  <li class="list-item">Доступность в любое время и с любого устройства;</li>
+                  <li class="list-item">Обеспечение высокой точности и надежности результатов;</li>
+                  <li class="list-item">Экономия ресурсов за счет автоматизации рутинных задач;</li>
+                  <li class="list-item">Постоянная поддержка и обновления программного обеспечения.</li>
+                </ul>
+              </div>
             </div>
-          </div>
+            
         </div>
       </div>
     </div>
-
-    <style>
-        .project-overview {
-          background-color: #fff;
-          display: flex;
-          flex-direction: column;
-          overflow: hidden;
-          padding: 15px 60px 59px;
-        }
-        
-        .nav-container {
-          display: flex;
-          width: 100%;
-          gap: 20px;
-          color: #343333;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          font: 400 16px/44px Roboto, sans-serif;
-        }
-        
-        .nav-links {
-          display: flex;
-          gap: 40px 67px;
-          flex-wrap: wrap;
-        }
-        
-        .logo {
-          aspect-ratio: 1;
-          object-fit: contain;
-          object-position: center;
-          width: 32px;
-          align-self: start;
-        }
-        
-        .hero-section {
-          align-self: center;
-          width: 100%;
-          max-width: 1029px;
-          margin: 64px 0 0 17px;
-        }
-        
-        .hero-content {
-          gap: 20px;
-          display: flex;
-        }
-        
-        .hero-image-col {
-          background-image: url('/static/bridge_app/img/o_proekte1.svg');
-          display: flex;
-          flex-direction: column;
-          line-height: normal;
-          width: 45%;
-        }
-        
-        .hero-image {
-          aspect-ratio: 3.47;
-          object-fit: contain;
-          object-position: center;
-          width: 100%;
-        }
-        
-        .hero-text-col {
-          background-image: url('/static/bridge_app/img/o_proekte2.svg');
-          display: flex;
-          flex-direction: column;
-          line-height: normal;
-          width: 55%;
-          margin-left: 20px;
-        }
-        
-        .hero-heading {
-          color: #fff;
-          font: 400 24px/28px Roboto, sans-serif;
-        }
-        
-        .main-content {
-          align-self: end;
-          margin-top: 87px;
-          width: 100%;
-          max-width: 1096px;
-        }
-        
-        .content-grid {
-          gap: 20px;
-          display: flex;
-        }
-        
-        .description-col {
-          display: flex;
-          flex-direction: column;
-          line-height: normal;
-          width: 50%;
-        }
-        
-        .main-description {
-          background-image: url('/static/bridge_app/img/o_proekte3.svg');
-          color: #fff;
-          margin-top: 16px;
-          font: 400 20px/28px Roboto, sans-serif;
-        }
-        
-        .features-col {
-          display: flex;
-          flex-direction: column;
-          line-height: normal;
-          width: 50%;
-          margin-left: 20px;
-        }
-        
-        .features-wrapper {
-          display: flex;
-          width: 100%;
-          flex-direction: column;
-          align-items: start;
-          color: #fff;
-          font: 400 14px/16px Roboto, sans-serif;
-        }
-        
-        .feature-block {
-          background-image: url('/static/bridge_app/img/o_proekte4.svg');
-          display: flex;
-          gap: 25px;
-          flex-wrap: wrap;
-        }
-        
-        .feature-icon {
-          aspect-ratio: 1;
-          object-fit: contain;
-          object-position: center;
-          width: 67px;
-          margin: auto 0;
-        }
-        
-        .feature-list {
-          flex-basis: auto;
-          flex-grow: 1;
-        }
-        
-        .benefits-block {
-          background-image: url('/static/bridge_app/img/o_proekte5.svg');
-          display: flex;
-          margin-top: 73px;
-          gap: 19px;
-          flex-wrap: wrap;
-        }
-        
-        .benefits-icon {
-          aspect-ratio: 1;
-          object-fit: contain;
-          object-position: center;
-          width: 77px;
-          margin: auto 0;
-        }
-        
-        .benefits-list {
-          flex-basis: auto;
-          flex-grow: 1;
-        }
-        
-        .cta-button {
-            align-self: end;
-            border-radius: 391px;
-            background: var(--Accent, #2f62f6);
-            margin-top: 225px;
-            color: var(--White, #fff);
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: var(--Headline-Small-Tracking, 0px);
-            padding: 21px 45px;
-            font: 400 24px/36px Roboto, sans-serif;
-            cursor: pointer;
-            
-          }
-      
-          .cta-button {
-              margin-left: auto; /* Сдвигает кнопку вправо */
-              margin-right: 100;   /* Убирает отступ справа */
-              display: block;    /* Устанавливает блочное отображение */
-          }
-      
-          .cta-button a {
-            text-decoration: none;
-          }
-      
-          .cta-button a:active,
-          .cta-button a:focus {
-            color: inherit;
-            outline: none; 
-            }
-        
-        .heading-bold {
-          font-weight: 700;
-          font-size: 16px;
-        }
-        
-        .list-item {
-          font-size: 12px;
-        }
-        
-        @media (max-width: 991px) {
-          .project-overview {
-            padding: 0 20px;
-          }
-          
-          .nav-container {
-            max-width: 100%;
-            margin-right: 5px;
-          }
-          
-          .nav-links {
-            max-width: 100%;
-          }
-          
-          .hero-section {
-            max-width: 100%;
-            margin-top: 40px;
-          }
-          
-          .hero-content {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0;
-          }
-          
-          .hero-image-col,
-          .hero-text-col {
-            width: 100%;
-            margin-left: 0;
-          }
-          
-          .hero-image {
-            margin-top: 40px;
-          }
-          
-          .hero-heading {
-            margin-top: 40px;
-          }
-          
-          .main-content {
-            max-width: 100%;
-            margin-top: 40px;
-          }
-          
-          .content-grid {
-            flex-direction: column;
-            align-items: stretch;
-            gap: 0;
-          }
-          
-          .description-col,
-          .features-col {
-            width: 100%;
-            margin-left: 0;
-          }
-          
-          .main-description {
-            margin-top: 40px;
-          }
-          
-          .features-wrapper {
-            margin-top: 40px;
-          }
-          
-          .benefits-block {
-            margin-top: 40px;
-          }
-          
-          .cta-button {
-            margin-top: 40px;
-            padding: 0 20px;
-          }
-        }
-        </style>
-        
-</body>
-</html>
+    <div class="button-container">
+      <a href="page" class="cta-button">
+        НАЧАТЬ ПРОЕКТИРОВАТЬ
+      </a>
+  </div>
+  </div>
+{% endblock %}

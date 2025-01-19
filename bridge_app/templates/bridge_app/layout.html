@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>        
+        {% block title %}
+            Мост Проект
+        {% endblock %}
+    </title>
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'bridge_app/css/style.css' %}">
+    {% endblock %}
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+</head>
+<body>
+    <nav class="header-nav" role="navigation" aria-label="Main navigation">
+        <div class="nav-links">
+          <a href="index" class="nav-button" aria-label="Начало">НАЧАЛО</a>
+          <a href="page2" class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</a>
+          <a href="page" class="nav-button" aria-label="Примеры">ПРИМЕРЫ</a>
+          <a href="page1" class="nav-button" aria-label="Контакты">КОНТАКТЫ</a>
+        </div>
+        <button href="page" class="search-button" aria-label="Search">
+          <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/367bf299f54175b6b2c124d3b298a66eeca6205bca5fef15aa26b2d7b065baaf?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="logo" alt="Search" />
+        </button>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

@@ -1,28 +1,16 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
-    <title>Мост Проект</title>
-</head>
-
-<body>
+{% extends "bridge_app/layout.html" %}
+{% block title %}
+  Примеры
+{% endblock %}
+{% block content %}
   <div class="bridge-design">
-    <nav class="header-nav">
-      <div class="nav-links">
-        <a href="page2" class="nav-button" aria-label="Теория">ТЕОРИЯ</a>
-        <a href="page2" class="nav-button" aria-label="О проекте">О ПРОЕКТЕ</a>
-        <a href="page" class="nav-button" aria-label="Примеры">ПРИМЕРЫ</a>
-        <a href="page1" class="nav-button" aria-label="Контакты">КОНТАКТЫ</a>
-      </div>
-      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7082f07c2650e46b4b21187ee54647b4fb78bf876d61538596dbe1af6192978f?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="menu-icon" alt="" />
-    </nav>
   
     <main class="main-content">
       <div class="content-wrapper">
         <div class="image-column">
-          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02ebcdcb6386362723e417bdfc1c1a6e651d28fa8ffe9894e508591f6d4e4383?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="bridge-image" alt="Bridge design visualization" />
+          <a href="page2" class="bridge-image">
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/02ebcdcb6386362723e417bdfc1c1a6e651d28fa8ffe9894e508591f6d4e4383?placeholderIfAbsent=true&apiKey=8f78af374d1a4dcb8c7332179435552e" class="bridge-image" alt="Bridge design visualization" />
+          </a>
         </div>
         <div class="text-column">
           <p class="description">
@@ -35,276 +23,22 @@
     <h2 class="section-title">Выберите тип моста</h2>
   
     <div class="bridge-types-row">
-      <button class="bridge-button">ПЕШЕХОДНЫЙ ПЕРЕХОД</button>
-      <button class="bridge-button">БАЛОЧНЫЕ МОСТЫ</button>
-      <button class="bridge-button">ВАНТОВЫЕ МОСТЫ</button>
+      <a class="bridge-button" href="/bridge_designer">ПЕШЕХОДНЫЙ ПЕРЕХОД</a>
+      <a class="bridge-button" href="/bridge_designer">БАЛОЧНЫЕ МОСТЫ</a>
+      <a class="bridge-button" href="/bridge_designer">ВАНТОВЫЕ МОСТЫ</a>
     </div>
   
     <div class="bridge-types-row-2">
-      <button class="bridge-button">ФЕРМЕННЫЕ МОСТЫ</button>
-      <button class="bridge-button">АРОЧНЫЕ МОСТЫ</button>
-      <button class="bridge-button">ВИСЯЧИЕ МОСТЫ</button>
+      <a class="bridge-button" href="/bridge_designer">ФЕРМЕННЫЕ МОСТЫ</a>
+      <a class="bridge-button" href="/bridge_designer">АРОЧНЫЕ МОСТЫ</a>
+      <a class="bridge-button" href="/bridge_designer">ВИСЯЧИЕ МОСТЫ</a>
     </div>
   
-    <button href="bridge_designer" class="cta-button" aria-label="Начать проектировать">
-      <a href="bridge_designer">НАЧАТЬ ПРОЕКТИРОВАТЬ</a>
-    </button>
+    <div class="button-container">
+      <a href="/bridge_designer" class="cta-button">
+        НАЧАТЬ ПРОЕКТИРОВАТЬ
+      </a>
+    </div>
   </div>
-
-  <style>
-    .bridge-design {
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      padding: 15px 60px 59px;
-    }
-    
-    .header-nav {
-      display: flex;
-      width: 100%;
-      gap: 20px;
-      color: #343333;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font: 400 16px/44px Roboto, sans-serif;
-    }
-    
-    .cta-button {
-      align-self: end;
-      border-radius: 391px;
-      background: var(--Accent, #2f62f6);
-      margin-top: 366px;
-      min-height: 78px;
-      color: var(--White, #fff);
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: var(--Headline-Small-Tracking, 0px);
-      padding: 21px 45px;
-      font: 400 24px/36px Roboto, sans-serif;
-      cursor: pointer;
-      border: none;
-    }
-
-    .cta-button {
-      margin-left: auto; /* Сдвигает кнопку вправо */
-      margin-right: 100;   /* Убирает отступ справа */
-      display: block;    /* Устанавливает блочное отображение */
-    }
-
-    .cta-button a {
-    text-decoration: none;
-    }
-
-    .cta-button a:active,
-    .cta-button a:focus {
-      color: inherit;
-      outline: none; 
-    }
-    
-    .nav-button {
-      background: none;
-      border: none;
-      color: inherit;
-      font: inherit;
-      cursor: pointer;
-      padding: 8px 16px;
-      transition: text-decoration 0.2s;
-      border-radius: 4px;
-      text-decoration: none;
-
-    }
-    
-    .nav-button:hover {
-      background-color: rgba(47, 98, 246, 0.1);
-      text-decoration: underline;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 40px 67px;
-      flex-wrap: wrap;
-    }
-    
-    .menu-icon {
-      aspect-ratio: 1;
-      object-fit: contain;
-      object-position: center;
-      width: 32px;
-    }
-    
-    .main-content {
-      align-self: center;
-      width: 100%;
-      margin: 64px 0 0 0;
-    }
-    
-    .content-wrapper {
-      gap: 20px;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      
-    }
-    
-    .image-column {
-      background-image: url('/static/bridge_app/img/oproekte2.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 45%;
-      padding: 30px;
-    }
-    
-    .bridge-image {
-      aspect-ratio: 3.47;
-      object-fit: contain;
-      object-position: center;
-      width: 100%;
-    }
-    
-    .text-column {
-      background-image: url('/static/bridge_app/img/oproekte1.svg');
-      background-repeat: no-repeat;
-      background-size: cover;
-      display: flex;
-      flex-direction: column;
-      line-height: normal;
-      width: 45%;
-      margin-left: 30px;
-    }
-    
-    .description {
-      color: #fff;
-      font: 400 24px/28px Roboto, sans-serif;
-    }
-    
-    .section-title {
-      color: #343333;
-      align-self: start;
-      margin-top: 39px;
-      font: 400 24px/44px Roboto, sans-serif;
-    }
-    
-    .bridge-types-row {
-      display: flex;
-      margin-top: 93px;
-      width: 100%;
-      gap: 120px;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font: 400 24px/1 Roboto;
-    }
-    
-    .bridge-button {
-      align-self: stretch;
-      border-radius: 391px;
-      background-color: #ff29c3;
-      min-height: 56px;
-      padding: 15px 48px;
-      border: none;
-      cursor: pointer;
-      flex: 1;
-      text-align: centre;
-    }
-    
-    .bridge-types-row-2 {
-      display: flex;
-      margin-top: 44px;
-      width: 100%;
-      gap: 120px;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
-      letter-spacing: 0;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      font: 400 24px/1 Roboto;
-    }
-    
-    .start-design-button {
-      align-self: end;
-      border-radius: 391px;
-      background-color: var(--Accent, #2f62f6);
-      margin-top: 123px;
-      min-height: 78px;
-      color: #fff;
-      text-align: center;
-      text-transform: uppercase;
-      padding: 21px 46px;
-      font: 400 24px/36px Roboto, sans-serif;
-      border: none;
-      cursor: pointer;
-    }
-    
-    @media (max-width: 991px) {
-      .bridge-design {
-        padding: 0 20px;
-      }
-    
-      .header-nav {
-        max-width: 100%;
-        margin-right: 5px;
-      }
-    
-      .nav-links {
-        max-width: 100%;
-      }
-    
-      .main-content {
-        max-width: 100%;
-        margin-top: 40px;
-      }
-    
-      .content-wrapper {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 0;
-      }
-    
-      .image-column {
-        width: 100%;
-      }
-    
-      .bridge-image {
-        margin-top: 40px;
-      }
-    
-      .text-column {
-        width: 100%;
-      }
-    
-      .description {
-        max-width: 100%;
-        margin-top: 40px;
-      }
-    
-      .bridge-types-row {
-        max-width: 100%;
-        margin-top: 40px;
-      }
-    
-      .bridge-button {
-        padding: 0 20px;
-      }
-    
-      .bridge-types-row-2 {
-        max-width: 100%;
-        margin-top: 40px;
-      }
-    
-      .start-design-button {
-        margin-top: 40px;
-        padding: 0 20px;
-      }
-
-      
-    </style>
-</body>
-</html>
+  <script src="js/OrbitControls.js"></script>
+{% endblock %}

@@ -28,15 +28,14 @@ let height = 10;
 createBridge(length, width, height);
 
 // Set camera position
-camera.position.z = 200;
-
+camera.position.z = 300;
 // Animation loop
 function animate() {
     requestAnimationFrame(animate);
     bridge.rotation.y += 0.01;
     renderer.render(scene, camera);
 }
-animate();
+    animate();
 
 // Update bridge on button click
 document.getElementById('update-bridge').addEventListener('click', () => {
