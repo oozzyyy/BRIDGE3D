@@ -45,7 +45,7 @@ body, p {
 }
 
 .button-container{
-  margin-top: 150px;
+  margin-top: 170px;
   width: 100%;
   display: flex;
   justify-content: end;
@@ -301,7 +301,7 @@ body, p {
   }
   
   .list-item {
-    font-size: 12px;
+    font-size: 15px;
   }
   
   @media (max-width: 991px) {
