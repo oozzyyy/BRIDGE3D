@@ -1,0 +1,635 @@
+body, p {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  *{
+    box-sizing: border-box;
+  }
+  #controls {
+    position: absolute;
+    top: 60px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  .hero-container{
+      background-image: url('/static/bridge_app/img/Titul_back.svg');
+      background-size: cover; /* или contain, если важно сохранить пропорции */
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 0 60px 200px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 100vh;
+      
+    }
+  
+  .header-nav {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    color: rgba(52, 51, 51, 1);
+    padding: 0 60px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font: 400 16px/44px Roboto, sans-serif;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 40px 67px;
+    flex-wrap: wrap;
+  }
+  
+  .button-container{
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+  .nav-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: text-decoration 0.2s;
+    border-radius: 4px;
+    text-decoration: none;
+  
+  }
+  
+  .nav-button:hover {
+    background-color: rgba(47, 98, 246, 0.1);
+    text-decoration: underline;
+  }
+  
+  
+  .search-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-button:focus {
+    outline: 2px solid #2f62f6;
+    outline-offset: 2px;
+  }
+  
+  .logo {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 32px;
+  }
+  
+  .logo-section {
+    margin-top: 84px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .logo-text {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .logo-text-secondary {
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  .hero-title {
+    color: #fff;
+    align-self: start;
+    margin-top: 26px;
+    font: 400 24px/28px Roboto, sans-serif;
+  }
+  
+  
+    
+  
+  @media (max-width: 991px) {
+    .main-container {
+      padding: 0 20px;
+    }
+    
+    .header-nav {
+      max-width: 100%;
+      margin-right: 5px;
+      }
+    
+    .nav-links {
+      max-width: 100%;
+    }
+    
+    .logo-section {
+      margin: 40px 0 0 5px;
+    }
+    
+    .hero-title {
+      max-width: 100%;
+    }
+    
+    .cta-button {
+      margin-top: 40px;
+      padding: 21px 30px;
+      width: 100%;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .nav-button,
+    .cta-button {
+      transition: none;
+    }
+  }
+  .project-overview {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 15px 60px 59px;
+  }
+    
+    .nav-container {
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      color: #343333;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font: 400 16px/44px Roboto, sans-serif;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 40px 67px;
+      flex-wrap: wrap;
+    }
+    
+    .logo {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 32px;
+    }
+    
+    .hero-section {
+      align-self: center;
+      width: 100%;
+      max-width: 1029px;
+      margin: 64px 0 0 17px;
+    }
+    
+    .hero-content {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .hero-image-col {
+      background-image: url('/static/bridge_app/img/o_proekte1.svg');
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 45%;
+    }
+    
+    .hero-image {
+      aspect-ratio: 3.47;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+    .hero-text-col {
+      background-image: url('/static/bridge_app/img/o_proekte2.svg');
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 55%;
+      margin-left: 20px;
+    }
+    
+    .hero-heading {
+      color: #fff;
+      font: 400 24px/28px Roboto, sans-serif;
+    }
+    
+    
+    .content-grid {
+      gap: 20px;
+      display: flex;
+    }
+    
+    .description-col {
+      display: flex;
+      flex-direction: column;
+      line-height: normal;
+      width: 45%;
+    }
+  
+    
+  
+    
+    .features-wrapper {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 30px;
+      color: #fff;
+      font: 400 14px/16px Roboto, sans-serif;
+    }
+    
+  
+    
+    .feature-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 67px;
+      margin: auto 0;
+    }
+    
+    .feature-list {
+      flex-basis: auto;
+      flex-grow: 1;
+    }
+    
+    .benefits-block {
+      background-image: url('/static/bridge_app/img/o_proekte5.svg');
+      display: flex;
+      margin-top: 73px;
+      gap: 19px;
+      flex-wrap: wrap;
+    }
+    
+    .benefits-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 77px;
+      margin: auto 0;
+    }
+    
+    .benefits-list {
+      flex-basis: auto;
+      flex-grow: 1;
+    }
+    
+  
+    
+    .heading-bold {
+      font-weight: 700;
+      font-size: 16px;
+    }
+    
+    .list-item {
+      font-size: 16px;
+    }
+    
+    @media (max-width: 991px) {
+      .project-overview {
+        padding: 0 20px;
+      }
+      
+      .nav-container {
+        max-width: 100%;
+        margin-right: 5px;
+      }
+      
+      .nav-links {
+        max-width: 100%;
+      }
+      
+      .hero-section {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+      
+      .hero-content {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      
+      .hero-image-col,
+      .hero-text-col {
+        width: 100%;
+        margin-left: 0;
+      }
+      
+      .hero-image {
+        margin-top: 40px;
+      }
+      
+      .hero-heading {
+        margin-top: 40px;
+      }
+      
+      .main-content {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+      
+      .content-grid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+      
+      .description-col,
+      .features-col {
+        width: 100%;
+        margin-left: 0;
+      }
+      
+      
+      .features-wrapper {
+        margin-top: 40px;
+      }
+      
+      .benefits-block {
+        margin-top: 40px;
+      }
+      
+      .cta-button {
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    }
+    .bridge-design {
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 15px 60px 59px;
+    }
+    
+    .header-nav {
+      display: flex;
+      width: 100%;
+      gap: 20px;
+      color: #343333;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font: 400 16px/44px Roboto, sans-serif;
+      padding: 0 60px;
+    }
+    
+    .cta-button {
+      margin-top: auto;
+      align-self: end;
+      border-radius: 50px;
+      background: var(--Accent, #2f62f6);
+      min-height: 78px;
+      color: var(--White, #fff);
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: var(--Headline-Small-Tracking, 0px);
+      padding: 21px 45px;
+      font: 400 24px/36px Roboto, sans-serif;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      justify-self: end;
+    }
+    .cta-button:active,
+    .cta-button:focus, .cta-button:visited {
+      color: #fff;
+      outline: none; 
+    }
+    .nav-button {
+      background: none;
+      border: none;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+      padding: 8px 16px;
+      transition: text-decoration 0.2s;
+      border-radius: 4px;
+      text-decoration: none;
+  
+    }
+    
+    .nav-button:hover {
+      background-color: rgba(47, 98, 246, 0.1);
+      text-decoration: underline;
+    }
+  
+    .nav-links {
+      display: flex;
+      gap: 40px 67px;
+      flex-wrap: wrap;
+    }
+    
+    .menu-icon {
+      aspect-ratio: 1;
+      object-fit: contain;
+      object-position: center;
+      width: 32px;
+    }
+    
+    .main-content {
+      align-self: center;
+      width: 100%;
+      margin: 30px 0 0 0;
+    }
+    
+    .content-wrapper {
+      gap: 30px;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      
+    }
+    
+    .image-column, .text-column, .description-col, .feature-block {
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      line-height: normal;
+      width: 50%;
+      padding: 30px;  
+    }
+  
+    .image-column{
+      background-image: url('/static/bridge_app/img/oproekte2.svg');
+    }
+    .text-column {
+      background-image: url('/static/bridge_app/img/oproekte1.svg');
+    }
+  
+    .bridge-image {
+      aspect-ratio: 3.47;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+    
+  
+    
+    .description {
+      color: #fff;
+      font: 400 30px/32px Roboto, sans-serif;
+    }
+    
+    .section-title {
+      color: #343333;
+      align-self: start;
+      margin-top: 39px;
+      font: 400 24px/44px Roboto, sans-serif;
+    }
+    
+    .bridge-types-row {
+      display: flex;
+      margin-top: 20px;
+      width: 100%;
+      gap: 120px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font: 400 24px/1 Roboto;
+    }
+    
+    .bridge-button {
+      align-self: stretch;
+      border-radius: 391px;
+      background-color: #ff29c3;
+      min-height: 56px;
+      padding: 15px 48px;
+      border: none;
+      cursor: pointer;
+      flex: 1;
+      text-align: centre;
+      color: #fff;
+      text-decoration: none;
+      font: 400 20px / 28px Roboto, sans-serif;
+    }
+    
+    .bridge-types-row-2 {
+      display: flex;
+      margin-top: 44px;
+      width: 100%;
+      gap: 120px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 0;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font: 400 24px/1 Roboto;
+    }
+    
+    .start-design-button {
+      align-self: end;
+      border-radius: 391px;
+      background-color: var(--Accent, #2f62f6);
+      margin-top: 123px;
+      min-height: 78px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      padding: 21px 46px;
+      font: 400 24px/36px Roboto, sans-serif;
+      border: none;
+      cursor: pointer;
+    }
+    
+    @media (max-width: 991px) {
+      .bridge-design {
+        padding: 0 20px;
+      }
+    
+      .header-nav {
+        max-width: 100%;
+        margin-right: 5px;
+      }
+    
+      .nav-links {
+        max-width: 100%;
+      }
+    
+      .main-content {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .content-wrapper {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+    
+      .image-column {
+        width: 100%;
+      }
+    
+      .bridge-image {
+        margin-top: 40px;
+      }
+    
+      .text-column {
+        width: 100%;
+      }
+    
+      .description {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .bridge-types-row {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .bridge-button {
+        padding: 0 20px;
+      }
+    
+      .bridge-types-row-2 {
+        max-width: 100%;
+        margin-top: 40px;
+      }
+    
+      .start-design-button {
+        margin-top: 40px;
+        padding: 0 20px;
+      }
+    }
+    .main-description {
+      background-image: url('/static/bridge_app/img/o_proekte3.svg');
+      color: #fff;
+      align-items: start;
+      font: 400 20px/28px Roboto, sans-serif;
+    }
+    .features-col{
+      width: 50%;
+    }
+    .feature-block {
+      background-image: url('/static/bridge_app/img/o_proekte4.svg');
+      flex-direction: row;
+      gap: 25px;
+      flex-wrap: wrap;
+      width: 100%;
+    }

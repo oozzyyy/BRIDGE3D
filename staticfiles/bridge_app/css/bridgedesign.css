@@ -1,0 +1,9 @@
+.unit {
+    margin-left: 5px; /* Отступ слева от числа */
+    font-size: 16px;
+}
+
+canvas {
+    background: white !important;
+    display: block;
+}
