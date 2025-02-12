@@ -23,15 +23,27 @@
     <h2 class="section-title">Выберите тип моста</h2>
   
     <div class="bridge-types-row">
-      <a class="bridge-button" href="/bridge_designer">ПЕШЕХОДНЫЙ ПЕРЕХОД</a>
-      <a class="bridge-button" href="/bridge_designer">БАЛОЧНЫЕ МОСТЫ</a>
-      <a class="bridge-button" href="/bridge_designer">ВАНТОВЫЕ МОСТЫ</a>
+      <a class="bridge-button" href="/bridge_designer">ВИСЯЧИЙ МОСТ</a>
+      <a class="bridge-button" href="/bridge_designer">ПЕШЕХОДНЫЙ МОСТ</a>
+      <a class="bridge-button" href="/bridge_designer">АРОЧНЫЕ МОСТЫ</a>
     </div>
   
     <div class="bridge-types-row-2">
-      <a class="bridge-button" href="/bridge_designer">ФЕРМЕННЫЕ МОСТЫ</a>
-      <a class="bridge-button" href="/bridge_designer">АРОЧНЫЕ МОСТЫ</a>
-      <a class="bridge-button" href="/bridge_designer">ВИСЯЧИЕ МОСТЫ</a>
+      <div class="bridge-gallery">
+        <div class="bridge-container">
+          <img src="/static/bridge_app/img/golden_gate.jpg" alt="Золотые Ворота" class="bridge-img">
+          <div class="bridge-info">Золотые Ворота, США. Длина: 2737 м.</div>
+        </div>
+        
+        <div class="bridge-container">
+          <img src="/static/bridge_app/img/paryashi_most.jpg" alt="Бруклинский мост" class="bridge-img">
+          <div class="bridge-info">Парящий мост, Россия. Длина: 244 м.</div>
+        </div>
+        <div class="bridge-container">
+          <img src="/static/bridge_app/img/bugrinskiy_most.jpg" alt="Бугринский мост" class="bridge-img">
+          <div class="bridge-info">Бугринский мост, Россия. Длина: 2100 м.</div>
+        </div>
+      </div>
     </div>
   
     <div class="button-container">
@@ -40,5 +52,4 @@
       </a>
     </div>
   </div>
-  <script src="js/OrbitControls.js"></script>
 {% endblock %}
