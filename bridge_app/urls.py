@@ -10,6 +10,8 @@ urlpatterns = [
     path('page1', views.page1),
     path('page2', views.page2),
     path('index', views.index),
+    path('bridgedes', views.bridgedes),
+    path('bridgedes1', views.bridgedes1),
 ]
 
 if settings.DEBUG:

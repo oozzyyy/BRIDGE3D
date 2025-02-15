@@ -14,3 +14,9 @@ def page1(request):
 
 def page2(request):
     return render(request, "bridge_app/page2.html")
+
+def bridgedes(request):
+    return render(request, "bridge_app/bridgedes.html")
+
+def bridgedes1(request):
+    return render(request, "bridge_app/bridgedes1.html")
