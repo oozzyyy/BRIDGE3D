@@ -636,7 +636,7 @@ body, p {
   .bridge-gallery {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 500px;
     margin-top: 20px;
 }
 
@@ -648,9 +648,7 @@ body, p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.bridge-container:nth-child(1) {
-  margin-right: 50px;
-}
+
 .bridge-img {
     width: 100%;
     height: 100%;
