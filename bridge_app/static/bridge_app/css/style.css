@@ -1,7 +1,6 @@
 body, p {
   margin: 0;
   padding: 0;
-  overflow: hidden;
 }
 *{
   box-sizing: border-box;
@@ -15,7 +14,7 @@ body, p {
   z-index: 10;
 }
 .hero-container{
-    background-image: url('/static/bridge_app/img/Titul_back.svg');
+    background-image: url('/static/bridge_app/img/Titul_back.jpg');
     background-size: cover; /* или contain, если важно сохранить пропорции */
     background-repeat: no-repeat;
     background-position: center;
@@ -502,7 +501,6 @@ body, p {
     display: flex;
     margin-top: 20px;
     width: 100%;
-    gap: 120px;
     color: #fff;
     text-align: center;
     text-transform: uppercase;
@@ -513,18 +511,17 @@ body, p {
   }
   
   .bridge-button {
-    align-self: stretch;
     border-radius: 391px;
     background-color: #ff29c3;
     min-height: 56px;
     padding: 15px 48px;
     border: none;
     cursor: pointer;
-    flex: 1;
-    text-align: centre;
+    text-align: center;
     color: #fff;
     text-decoration: none;
     font: 400 20px / 28px Roboto, sans-serif;
+    width: 30%;
   }
   
   .bridge-types-row-2 {
@@ -635,15 +632,15 @@ body, p {
   }
   .bridge-gallery {
     display: flex;
-    justify-content: center;
-    gap: 500px;
+    justify-content: space-between;
     margin-top: 20px;
+    width: 100%;
 }
 
 .bridge-container {
     position: relative;
-    width: 300px;
-    height: 200px;
+    width: 30%;
+    height: 300px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -677,7 +674,10 @@ body, p {
     opacity: 1;
 }
 
-
+.nogap {
+  margin: 0;
+  margin-top: 40px;
+}
 
 
 
