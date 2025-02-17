@@ -12,6 +12,7 @@ urlpatterns = [
     path('index', views.index),
     path('bridgedes', views.bridgedes),
     path('bridgedes1', views.bridgedes1),
+    path('test', views.test),
 ]
 
 if settings.DEBUG:

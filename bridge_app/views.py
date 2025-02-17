@@ -20,3 +20,6 @@ def bridgedes(request):
 
 def bridgedes1(request):
     return render(request, "bridge_app/bridgedes1.html")
+
+def test(request):
+    return render(request, "bridge_app/test.html")
