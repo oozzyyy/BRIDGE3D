@@ -1,0 +1,8 @@
+<form method="POST">
+    {% csrf_token %}
+    <h2>{{ question }}</h2>
+    {% for option in options %}
+        <label><input type="radio" name="answer" value="{{ option }}" required> {{ option }}</label><br>
+    {% endfor %}
+    <button type="submit">Далее</button>
+</form>

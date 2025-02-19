@@ -13,7 +13,18 @@ urlpatterns = [
     path('bridgedes', views.bridgedes),
     path('bridgedes1', views.bridgedes1),
     path('test', views.test),
+    path('test_result', views.test_result),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+
+
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('test/<int:question_number>/', views.test, name='test'),
+    path('test/result/', views.test_result, name='test_result'),
+]
