@@ -2,7 +2,6 @@ from django.urls import path
 from . import views
 from django.conf import settings
 from django.conf.urls.static import static
-
 urlpatterns = [
     path('bridge_designer', views.bridge_designer, name='bridge_designer'),
     path('', views.index),
@@ -14,6 +13,8 @@ urlpatterns = [
     path('bridgedes1', views.bridgedes1),
     path('test', views.test),
     path('test_result', views.test_result),
+    path('test/<int:question_number>/', views.test, name='test'),
+    path('test/result/', views.test_result, name='test_result'),
 ]
 
 if settings.DEBUG:
@@ -23,8 +24,3 @@ if settings.DEBUG:
 
 from django.urls import path
 from . import views
-
-urlpatterns = [
-    path('test/<int:question_number>/', views.test, name='test'),
-    path('test/result/', views.test_result, name='test_result'),
-]

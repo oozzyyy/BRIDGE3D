@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.http import HttpRequest
+from .models import UserResponse
+from django.http import HttpResponse
 
 def bridge_designer(request):
     return render(request, 'bridge_app/bridge_designer.html')
@@ -27,10 +30,6 @@ def test(request):
 def test_result(request):
     return render(request, "bridge_app/test_result.html")
 
-
-from django.shortcuts import render, redirect
-from django.http import HttpRequest
-from .models import UserResponse
 
 QUESTIONS = [
     {"text": "Какой длины должен быть мост?", "options": ["Короткий", "Средний", "Длинный"]},
